@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="manifest" href="/manifest.json">
+  <title>Rádio 108FM</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Rádio 108FM</h1>
+  </header>
+  <main>
+    <div class="player">
+      <audio id="audioPlayer" controls>
+        <source src="https://stream.zeno.fm/vpzrr5p1rpguv" type="audio/mpeg">
+        Seu navegador não suporta o elemento de áudio.
+      </audio>
+      <div class="now-playing">
+        <img id="albumImage" src="" alt="Imagem do Álbum">
+        <p id="trackName">Carregando...</p>
+      </div>
+    </div>
+  </main>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function() {
+        navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
+          console.log('Service Worker registrado com sucesso:', registration);
+        }, function(err) {
+          console.log('Falha ao registrar o Service Worker:', err);
+        });
+      });
+    }
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>

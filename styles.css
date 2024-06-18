@@ -1,0 +1,30 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  text-align: center;
+  padding: 20px;
+}
+
+header {
+  background-color: #000000;
+  color: #ffffff;
+  padding: 10px 0;
+}
+
+.player {
+  margin-top: 20px;
+}
+
+.now-playing {
+  margin-top: 20px;
+}
+
+#albumImage {
+  width: 200px;
+  height: 200px;
+}
+
+#trackName {
+  font-size: 1.2em;
+  margin-top: 10px;
+}
